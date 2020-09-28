@@ -2,8 +2,8 @@ var cloudinary = require("cloudinary");
 
 cloudinary.config({ 
     cloud_name: 'gsgowtham', 
-    api_key: '536367358581895', 
-    api_secret: 'ip3weC8DU9BrQySIBQZVc9NfScE' 
+    api_key: '', 
+    api_secret: '' 
   });
 
 const uploadToCloud = (fileName, callback) => {
