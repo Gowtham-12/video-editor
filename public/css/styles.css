@@ -1,0 +1,189 @@
+.wrapper {
+    width: 600px;
+    max-width: 90%;
+    background: #1f242a;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .playback {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 24px;
+    margin-right: 24px;
+    height: 1px;
+    background: #2f3b44;
+    margin-bottom: 1rem;
+    border-radius: 1px;
+  }
+  .playback .seekable {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ccc;
+    cursor: pointer;
+  }
+  .playback .grabber {
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    width: 13px;
+    border-radius: 11px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .playback .grabber.start {
+    background: #a8d736;
+    left: 0;
+  }
+  .playback .grabber.end {
+    background: #fc4242;
+    right: 0;
+  }
+  .playback .grabber:hover {
+    transform: scaleY(1.4);
+  }
+  .playback .grabber svg {
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+  }
+  .playback .progress {
+    height: 1px;
+    background: #0072cf;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .controls .player-controls button {
+    width: 34px;
+    margin: 0 0.125rem;
+  }
+  .controls .player-controls .play-control {
+    background: #2f3b44;
+    border: 0;
+    color: #a5b0b5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .controls .player-controls .play-control:hover {
+    background: #445562;
+  }
+  .controls .player-controls .seek-start {
+    background: #2f3b44;
+    border: 0;
+    color: #a5b0b5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .controls .player-controls .seek-start:hover {
+    background: #445562;
+  }
+  .controls .player-controls .seek-end {
+    background: #2f3b44;
+    border: 0;
+    color: #a5b0b5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .controls .player-controls .seek-end:hover {
+    background: #445562;
+  }
+  .controls .reset-control {
+    background: #2f3b44;
+    border: 0;
+    color: #a5b0b5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .controls .reset-control:hover {
+    background: #445562;
+  }
+  .controls .trim-control {
+    background: #0072cf;
+    border: 0;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .controls .trim-control:hover {
+    background: #038eff;
+  }
+  
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  #fileupload {
+    text-align: center;
+  }
+  

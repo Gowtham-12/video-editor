@@ -1,0 +1,30 @@
+    <a id="converter" onclick="getFileAsMP4()">Download uploaded file as MP4</a>
+    <div class="wrapper">
+      <video id="initial" class="video" width="640" autoload="metadata">
+      </video>
+      <div class="playback">
+        <div class="grabber start">
+        </div>
+        <div class="grabber end">
+        </div>
+        <div class="seekable">
+        </div>
+        <div class="progress">
+        </div>
+      </div>
+      <div class="controls"> 
+        <div>
+          <button class="reset-control fa fa-refresh" title="Reset Video"></button>
+        </div>
+        <div class="player-controls">
+          <button class="seek-start fa fa-step-backward" title="Skip to Start"></button>
+          <button class="play-control fa fa-play" title="Play/Pause"></button>
+          <button class="seek-end fa fa-step-forward" title="Skip to End"></button>
+        </div>
+        <div>
+          <button class="trim-control" id="trimmer">Trim</button>
+          <button class="trim-control fa fa-plus" id="addtrim">Add</button>
+        </div>
+      </div>
+    </div>
+
