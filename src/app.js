@@ -2,7 +2,6 @@ var express = require('express')
 var path = require('path')
 var cloud = require('./cloud')
 var hbs = require('hbs');
-var fs = require('fs')
 const bodyParser = require('body-parser')
 const expressfileUpload = require('express-fileupload')
 
@@ -15,7 +14,7 @@ app.use(bodyParser.json());
 app.use(
   expressfileUpload({
     useTempFiles: true,
-    tempFileDir: "../tmp/"
+    tempFileDir: "./tmp/"
   })
 );
 
@@ -31,13 +30,10 @@ app.get("",(req,res)=>{
 
 app.post("/upload", (req,res)=> {
   let file = req.files.file
-  file.mv("../tmp/" + file.name, function (err) {
+  file.mv("./tmp/" + file.name, function (err) {
     if (err) { return res.sendStatus(500).send(err); }
     console.log("File Uploaded successfully");
     cloud.uploadToCloud(file.name, (url,public_id)=>{
-      fs.unlink("../tmp/" + file.name, () => {
-        console.log("Removed tmp file from server "+ file.name)
-      })
       res.send({url , public_id})
     });   
   });

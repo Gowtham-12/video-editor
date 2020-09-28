@@ -266,6 +266,7 @@ form.addEventListener('submit', (e) => {
       .read()
       .then(({value, done}) => {
           var res = decoder.decode(value)
+          console.log(value)
           res = JSON.parse(res)
           public_id = res.public_id
           var initial = document.getElementById('initial')
